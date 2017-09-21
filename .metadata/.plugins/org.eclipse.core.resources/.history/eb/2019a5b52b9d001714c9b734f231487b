@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+import org.joda.time.DateTime;
+
+public class CourseProgramme 
+{
+	
+	private String name;
+	private ArrayList<Module> modules = new ArrayList<Module>();
+	private DateTime startDate;
+	private DateTime endDate;
+	
+	public CourseProgramme (String Name,
+			DateTime StartDate, DateTime EndDate)
+	{
+		this.name = Name;
+		this.startDate = StartDate;
+		this.endDate = EndDate;
+	}
+	
+	public void addModule(Module a)
+	{
+		this.modules.add(a);
+	}
+	
+	public void addDate(DateTime a, String Date)
+	{
+		if (Date == "Start")
+		{
+			this.startDate = a;
+		}
+		else 
+		{
+			this.endDate = a;
+		}
+	}
+	
+}

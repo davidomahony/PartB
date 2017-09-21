@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+import org.joda.time.DateTime;
+
+public class CourseProgramme 
+{
+	
+	private String name;
+
+	private DateTime startDate;
+	private DateTime endDate;
+	private ArrayList<Student> students = new ArrayList<Student>();
+	private ArrayList<Module> modules = new ArrayList<Module>();
+	
+	public CourseProgramme (String Name,
+			DateTime StartDate, DateTime EndDate)
+	{
+		this.name = Name;
+		this.startDate = StartDate;
+		this.endDate = EndDate;
+	}
+	
+	public void addModule(Module a)
+	{
+		this.modules.add(a);
+	}
+	
+	public void addStudent(Student a)
+	{
+		this.students.add(a);
+	}
+	
+	public void CourseInfo()
+	{
+		System.out.println("Course Name:" + this.name);
+		System.out.println("Modules");
+		for(Student a : students)
+		{
+			System.out.println(a.getModuleName());
+			a.ListStudents();
+		}
+	}
+			
+}

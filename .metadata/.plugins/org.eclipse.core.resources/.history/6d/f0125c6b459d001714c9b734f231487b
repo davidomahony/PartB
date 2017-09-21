@@ -1,0 +1,57 @@
+import org.joda.time.DateTime;
+
+public class MainPartB 
+{
+	
+	public static void main(String[] args)
+	{
+		Student studentA = new Student("AJK", "121", "06091995", 12);
+		Student studentB = new Student("AIL", "122", "06091994", 13);
+		Student studentC = new Student("AHM", "123", "06091993", 14);
+		Student studentD = new Student("AGN", "124", "06091992", 15);
+		Student studentE = new Student("AFO", "125", "06091991", 16);
+		Student studentF = new Student("AEP", "126", "06091990", 17);
+		Student studentG = new Student("ADQ", "127", "06091996", 11);
+		Student studentH = new Student("ACR", "128", "06091997", 10);
+		Student studentI = new Student("ABS", "129", "06091998", 9);
+		
+		Module moduleA = new Module("Software I", "S11");
+		Module moduleB = new Module("Software II", "S12");
+		Module moduleC = new Module("Hardware I", "H11");
+		Module moduleD = new Module("Hardware II", "H12");
+		
+		DateTime start = new DateTime(2017, 9, 6, 5, 5);		
+		DateTime end =  new DateTime(2018, 8, 6, 5, 5);
+		
+		
+		CourseProgramme eee = new CourseProgramme("EEE", start, end);
+		CourseProgramme ece = new CourseProgramme("ECE", start, end);
+		CourseProgramme csit = new CourseProgramme("CSIT", start, end);
+		
+		eee.addModule(moduleC);
+		eee.addModule(moduleD);
+		
+		ece.addModule(moduleA);
+		ece.addModule(moduleC);
+		
+		csit.addModule(moduleB);
+		csit.addModule(moduleA);
+		
+		eee.addStudent(studentA);
+		eee.addStudent(studentB);
+
+		for(Student a : eee.getStudents() )
+		{
+			System.out.println("Student Name : " + a.getName());
+			System.out.print("Course " + eee.getName()+" Modules: ");
+			for(Module b : eee.getModules())
+			{
+				System.out.print(b.getModuleName() + " ");
+			}
+			System.out.println();
+		}
+		
+	}
+
+	
+}

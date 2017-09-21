@@ -1,0 +1,20 @@
+
+public class MainPartB 
+{
+	
+	public static void main(String[] args)
+	{
+		Student studentA = new Student("AJK", "121", "06091995", 12);
+		Student studentB = new Student("AIL", "122", "06091994", 13);
+		Student studentC = new Student("AHM", "123", "06091993", 14);
+		Student studentD = new Student("AGN", "124", "06091992", 15);
+		Student studentE = new Student("AFO", "125", "06091991", 16);
+		Student studentF = new Student("AEP", "126", "06091990", 17);
+		Student studentG = new Student("ADQ", "127", "06091996", 11);
+		Student studentH = new Student("ACR", "128", "06091997", 10);
+		Student studentI = new Student("ABS", "129", "06091998", 9);
+		
+	}
+
+	
+}
